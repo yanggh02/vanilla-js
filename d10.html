@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>D10</title>
+        <meta charset="UTF-8" />
+        <link href="d10.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>숫자 맞추기</h1>
+        <div>
+            <h3>0 과</h3>
+            <div>
+                <h3 class="range-tag-js blue">10</h3>
+            </div>
+            <h3>사이 무작위 숫자 맞추기</h3>
+        </div>
+        <div>
+            <div>
+                <p class="blue">1</p>
+                <p class="yellow">50</p>
+                <p class="red">100</p>
+                <p class="green">20</p>
+                <p class="purple">200</p>
+            </div>
+            <input class="range-js" type="range" min="1" max="200" value="10"/>
+        </div>
+        <form>
+            <span>숫자 고르기:</span>
+            <input type="number" min="0" max="10" required/>
+            <input type="submit">
+        </form>
+        <div>
+            <span>무작위 숫자를 맞추면 승리합니다.</span>
+            <h4>범위 안에서 숫자를 고르고 버튼을 누르세요.</h4>
+        </div>
+        <div></div>
+        <div></div>
+        <script src="d10.js"></script>
+    </body>
+</html>

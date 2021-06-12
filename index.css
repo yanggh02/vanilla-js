@@ -1,0 +1,97 @@
+body {
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  min-height: 400px;
+  min-width: 500px;
+  user-select: none;
+}
+
+input,
+button {
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+.form,
+.greets {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+.js-toDoList {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body > div:first-child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgImg {
+  height: 56.25vw;
+  width: 177.78vh;
+  min-height: 100%;
+  min-width: 100%;
+  animation: fadeIn 0.5s linear;
+  z-index: -1;
+}
+
+.js-weather {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.js-weather div {
+  display: flex;
+  align-items: center;
+}
+
+.js-weather div:first-child {
+  font-size: 32px;
+  height: 64px;
+}
+
+.js-weather img {
+  height: 64px;
+  width: 64px;
+  margin-right: 5px;
+  margin-bottom: -10px;
+}
+
+.hide {
+  display: none;
+}

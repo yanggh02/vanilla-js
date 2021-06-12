@@ -1,0 +1,274 @@
+html {
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 550px;
+  max-height: 1080px;
+  width: 100%;
+  min-width: 550px;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ghostwhite;
+  color: rgb(36, 36, 36);
+  width: 500px;
+  height: 500px;
+  border-radius: 100px;
+  border-top: solid white 25px;
+  border-left: solid whitesmoke 25px;
+  border-right: solid whitesmoke 25px;
+  border-bottom: solid gainsboro 25px;
+  box-shadow: rgba(36, 36, 36, 0.5) 0px 300px 30px -15px,
+    black 0px 0px 15px -10px;
+  box-sizing: border-box;
+  cursor: default;
+  user-select: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  60% {
+    transform: rotateZ(1080deg);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.spin {
+  animation: spin 2s ease;
+}
+
+@keyframes vibrates {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(15px);
+  }
+  40% {
+    transform: translateX(-25px);
+  }
+  60% {
+    transform: translateX(25px);
+  }
+  80% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.vibrate {
+  animation: vibrates 0.5s ease;
+}
+
+.blue {
+  color: skyblue;
+  text-shadow: skyblue 0px 0px 10px;
+}
+
+.green {
+  color: yellowgreen;
+  text-shadow: yellowgreen 0px 0px 10px;
+}
+
+.yellow {
+  color: yellow;
+  text-shadow: yellow 0px 0px 10px;
+}
+
+.red {
+  color: tomato;
+  text-shadow: tomato 0px 0px 10px;
+}
+
+.purple {
+  color: violet;
+  text-shadow: violet 0px 0px 10px;
+}
+
+h1 {
+  margin-top: 50px;
+  text-shadow: gray -2px -2px 2px, gray 2px -2px 2px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.01;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+h1 + div > h3 {
+  text-shadow: gray -1px -1px 1px, gray 1px -1px 1px;
+}
+
+h3 + div {
+  width: 50px;
+  margin: 0px 10px;
+  background-color: rgb(36, 36, 36);
+  height: 30px;
+  border-radius: 10px;
+  justify-content: center;
+  box-shadow: rgba(36, 36, 36, 0.5) -1.5px -3px 1.5px,
+    rgba(36, 36, 36, 0.5) 1.5px -3px 1.5px;
+}
+
+.range-tag-js {
+  animation: blinking 5s ease-in-out infinite;
+  transition: color 1.5s ease, text-shadow 1.5s ease;
+}
+
+h1 + div + div {
+  flex-direction: column;
+  background-color: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 430px;
+  height: 55px;
+  box-shadow: rgba(36, 36, 36, 0.5) -1.5px -3px 1.5px,
+    rgba(36, 36, 36, 0.5) 1.5px -3px 1.5px;
+}
+
+div + div div {
+  width: 423px;
+  justify-content: space-between;
+  margin: -10px 0px -15px -3px;
+}
+
+p {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p:nth-child(4) {
+  position: relative;
+  left: -249px;
+}
+
+.range-js {
+  width: 398px;
+  cursor: pointer;
+}
+
+form {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+form span {
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: gray -0.75px -0.75px 0.75px, gray 0.75px -0.75px 0.75px;
+}
+
+input[type="number"] {
+  width: 50px;
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(36, 36, 36);
+  color: ghostwhite;
+  box-shadow: rgba(36, 36, 36, 0.5) -1.5px -3px 1.5px,
+    rgba(36, 36, 36, 0.5) 1.5px -3px 1.5px;
+  height: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  border: none;
+  text-shadow: ghostwhite 0px 0px 10px;
+  outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form input:last-child {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: tomato;
+  border-radius: 50%;
+  font-size: 0;
+  box-shadow: rgba(36, 36, 36, 0.5) 0px 5px 1.5px;
+  margin-left: 60px;
+}
+
+form + div {
+  display: block;
+  background-color: rgb(36, 36, 36);
+  color: ghostwhite;
+  text-shadow: ghostwhite 0px 0px 10px;
+  border-radius: 20px;
+  width: 350px;
+  height: 90px;
+  padding-top: 10px;
+  box-shadow: rgba(36, 36, 36, 0.5) -1.5px -3px 1.5px,
+    rgba(36, 36, 36, 0.5) 1.5px -3px 1.5px;
+}
+
+@keyframes blinking2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div span {
+  margin-left: 15px;
+}
+
+h4 {
+  text-align: center;
+  animation: blinking2 2s ease-in-out infinite;
+}
+
+form + div + div,
+div + div + div {
+  width: 10px;
+  height: 40px;
+  background-color: rgb(197, 77, 56);
+  position: relative;
+  margin-top: -40px;
+  left: 255px;
+  top: -150px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+div + div + div {
+  top: -100px;
+}
