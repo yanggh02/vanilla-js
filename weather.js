@@ -18,7 +18,8 @@ function getWeather(lat, lon){
         hour = date.getHours();
         let twHour;
         city.innerText = `@ ${data.name}`;
-        weather.innerText = `${temp}℃ / ${data.weather[0].main}`;
+        weather.innerText = `${temp}℃ ${weatherKr(data.weather[0].main)}`;
+        ;
         weatherIcon.setAttribute("src",`http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
         weatherIcon.classList.remove("hide");
         if(hour > 12) {
@@ -30,6 +31,42 @@ function getWeather(lat, lon){
         }
         time.innerText = `업데이트 ${mon}/${day} ${hour > 11 ? `오후` : "오전"} ${twHour}:${min < 10 ? `0${min}` : min}`;
     });
+}
+
+function weatherKr(text) {
+    if(text === "Clear") {
+        return "맑음"
+    } else if(text === "Clouds") {
+        return "흐림";
+    } else if(text === "Rain") {
+        return "비";
+    } else if(text === "Drizzle") {
+        return "이슬비";
+    } else if(text === "Thunderstorm") {
+        return "뇌우";
+    } else if(text === "Snow") {
+        return "눈";
+    } else if(text === "Mist") {
+        return "안개";
+    } else if(text === "Smoke") {
+        return "스모그";
+    } else if(text === "Haze") {
+        return "스모그";
+    } else if(text === "Dust") {
+        return "미세먼지";
+    } else if(text === "Fog") {
+        return "짙은 안개";
+    } else if(text === "Sand") {
+        return "황사";
+    } else if(text === "Ash") {
+        return "화산재";
+    } else if(text === "Squall") {
+        return "소나기";
+    } else if(text === "Tornado") {
+        return "태풍";
+    } else {
+        return text;
+    }
 }
 
 function saveCoords(coordsObj){
