@@ -49,7 +49,7 @@ h4 {
 .form,
 .greets {
   display: none;
-  margin: 40px;
+  margin: 50px;
 }
 
 .showing {
@@ -66,7 +66,7 @@ input[type="text"] {
   width: 400px;
   box-sizing: border-box;
   padding: 0px 0px 5px 0px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 input[type="text"]::placeholder {
@@ -130,6 +130,7 @@ li span {
   display: block;
   word-break: break-all;
   margin-right: 5px;
+  margin-left: -20px;
 }
 
 @keyframes fadeIn {
