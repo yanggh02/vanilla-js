@@ -29,6 +29,8 @@ h1 {
   font-size: 96px;
   margin: 0px;
   font-weight: 500;
+  width: 400px;
+  margin-right: -60px;
 }
 
 h2 {
