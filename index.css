@@ -141,6 +141,15 @@ li span {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .bgImg {
   position: absolute;
   height: 56.25vw;
@@ -151,6 +160,10 @@ li span {
   animation: fadeIn 1s 1s linear forwards;
   z-index: -1;
   margin-top: -8px;
+}
+
+.bgOut {
+  animation: fadeOut 1s linear;
 }
 
 .js-weather {

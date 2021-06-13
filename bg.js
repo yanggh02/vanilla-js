@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
-
-const IMG_NUMBER = 3;
+const IMG_NUMBER = 7;
+let randomN;
 
 function paintImg(imgN){
     const img = new Image();
@@ -10,13 +10,28 @@ function paintImg(imgN){
 }
 
 function genRandom() {
-    const number = (Math.floor(Math.random() * 7) + 1);
+    let number = (Math.floor(Math.random() * IMG_NUMBER) + 1);
+    while(randomN === number){
+        number = (Math.floor(Math.random() * IMG_NUMBER) + 1);
+    }
     return number;
 }
 
-function init(){
-    const randomN = genRandom();
+function refreshImg() {
+    const img = body.querySelector(".bgImg");
+    img.classList.add("bgOut");
+    randomN = genRandom();
     paintImg(randomN);
+    setTimeout(function(){
+        const out = body.querySelector(".bgOut");
+        body.removeChild(out);
+    }, 1000);
+}
+
+function init(){
+    randomN = genRandom();
+    paintImg(randomN);
+    setInterval(refreshImg, 10000);
 }
 
 init();
