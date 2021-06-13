@@ -31,11 +31,11 @@ function paintToDo(text, id){
     } else {
         newId = id;
     }
-    delBtn.innerText = "완료";
+    delBtn.innerText = "삭제";
     delBtn.addEventListener("click", delToDo);
     span.innerText = text;
-    li.appendChild(delBtn);
     li.appendChild(span);
+    li.appendChild(delBtn);
     li.id = newId;
     ToDoList.appendChild(li);
     const toDoObj = {

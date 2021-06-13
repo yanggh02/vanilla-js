@@ -1,4 +1,4 @@
-const bgDiv = document.querySelector("body > div:first-child");
+const body = document.querySelector("body");
 
 const IMG_NUMBER = 3;
 
@@ -6,7 +6,7 @@ function paintImg(imgN){
     const img = new Image();
     img.src = `images/${imgN}.jpg`;
     img.classList.add("bgImg");
-    bgDiv.appendChild(img);
+    body.appendChild(img);
 }
 
 function genRandom() {

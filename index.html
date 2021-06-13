@@ -2,36 +2,40 @@
 <html lang="kr">
     <head>
         <meta charset="UTF-8">
-        <title>싱크</title>
+        <title>홈</title>
         <link href="index.css" rel="stylesheet" />
     </head>
     <body>
-        <div></div>
-        <div class="js-clock">
-            <h1>현재 시간을 불러오는 중입니다.</h1>
-        </div>
-        <form class="js-form form">
-            <input type="text" required placeholder="당신의 이름은 뭔가요?"/>
-            <input type="submit" value="확인">
-        </form>
-        <h4 class="js-greets greets"></h4>
-        <form class="js-toDoForm">
-            <input type="text" required placeholder="할 일을 적으세요."/>
-            <input type="submit" value="추가">
-        </form>
-        <ul class="js-toDoList">
-        </ul>
+        <main>
+            <div class="js-clock">
+                <div>
+                    <h2>오전</h2>
+                    <h1>12:00:00</h1>
+                </div>
+                <span>1000년 1월 1일 수요일</span>
+            </div>
+            <form class="js-form form">
+                <input type="text" required placeholder="당신의 이름은 뭔가요?"/>
+                <input type="submit" value="확인">
+            </form>
+            <h4 class="js-greets greets">안녕하세요.</h4>
+            <form class="js-toDoForm">
+                <input type="text" required placeholder="할 일을 적으세요."/>
+                <input type="submit" value="추가">
+            </form>
+            <ul class="js-toDoList">
+            </ul>
+        </main>
         <div class="js-weather">
             <div>
                 <img class="hide"/>
-                <span>날씨 정보가 없습니다.</span>
+                <span>날씨</span>
             </div>
-            <span>위치 정보를 불러오는 중입니다.</span>
+            <span>위치를 불러오는 중입니다.</span>
             <div>
-                <span>업데이트 안 됨</span>
+                <span>업데이트</span>
                 <button>갱신</button>
             </div>
-            
         </div>
         <script src="clock.js"></script>
         <script src="greetting.js"></script>

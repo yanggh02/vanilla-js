@@ -18,7 +18,7 @@ function getWeather(lat, lon){
         hour = date.getHours();
         let twHour;
         city.innerText = `@ ${data.name}`;
-        weather.innerText = `${data.weather[0].main} / ${temp}℃`;
+        weather.innerText = `${temp}℃ / ${data.weather[0].main}`;
         weatherIcon.setAttribute("src",`http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
         weatherIcon.classList.remove("hide");
         if(hour > 12) {
@@ -49,8 +49,7 @@ function onGeoOk(position){
 }
 
 function onGeoError(){
-    alert("위치 확인이 거부되었습니다.");
-    city.innerText = "위치 정보를 불러올 수 없습니다.";
+    city.innerText = "위치를 알 수 없습니다.";
 }
 
 function askForCoords(){
