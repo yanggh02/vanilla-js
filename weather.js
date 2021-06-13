@@ -8,8 +8,8 @@ function getWeather(lat, lon){
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=kr&units=metric&appid=${API_KEY}`;
     fetch(url).then(response => response.json()).then(data => {
         const weatherIcon = document.querySelector(".js-weather img"),
+        temp = document.querySelector(".js-weather div:first-child h3"),
         weather = document.querySelector(".js-weather div:first-child span"),
-        temp = Math.round(data.main.temp),
         time = document.querySelector(".js-weather div:last-child span"),
         date = new Date(),
         mon = date.getMonth() + 1,
@@ -18,7 +18,8 @@ function getWeather(lat, lon){
         hour = date.getHours();
         let twHour;
         city.innerText = `@ ${data.name}`;
-        weather.innerText = `${temp}℃ ${weatherKr(data.weather[0].main)}`;
+        temp.innerText = `${Math.round(data.main.temp)}℃`;
+        weather.innerText = `${weatherKr(data.weather[0].main)}`;
         ;
         weatherIcon.setAttribute("src",`http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
         weatherIcon.classList.remove("hide");
